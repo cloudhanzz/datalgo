@@ -5,7 +5,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- * In order to run this class from Maven command, the class name must end wit
+ * In order to run this class from Maven command, the class name must end with
  * "Test"; otherwise, it is hidden from Maven.
  * 
  * @author Jiayun Han
