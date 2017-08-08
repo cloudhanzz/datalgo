@@ -70,4 +70,33 @@ public class LooperTest {
 		Assert.assertTrue(result[0] == 6);
 		Assert.assertTrue(result[1] == 9);
 	}
+
+	@Test
+	public void testSplitUp() {
+		
+		int number = 123;
+		int batches = 4;
+
+		int[] result = looper.splitUp(number, batches);
+
+		Assert.assertTrue(result.length == 10);
+
+		int batchSize = number / batches - 1;
+
+		for (int i = 0; i < result.length - 3; i += 2) {
+			int start = result[i];
+			int end = result[i + 1];
+			int diff = end - start;
+			Assert.assertTrue(diff == batchSize);
+		}
+
+		for (int i = 1; i < result.length - 1; i += 2) {
+			int start = result[i];
+			int end = result[i + 1];
+			int diff = end - start;
+			Assert.assertTrue(diff == 1);
+		}
+		
+		Assert.assertTrue(result[result.length - 1] == number);
+	}
 }
