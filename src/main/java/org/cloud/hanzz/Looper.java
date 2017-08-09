@@ -161,6 +161,10 @@ public class Looper {
 	 *             1 or the former is smaller than the latter.
 	 */
 	public int[] splitUp(int number, int batches) {
+		if (number < 1 || batches < 1 || number < batches) {
+			throw new IllegalArgumentException(
+					"Either number and batches are not both greater than 1 or the former is smaller than the latter");
+		}
 
 		int batchSize = number / batches;
 
