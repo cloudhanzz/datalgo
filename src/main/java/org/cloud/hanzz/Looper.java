@@ -140,6 +140,11 @@ public class Looper {
 	 * then the following array should be returned
 	 * 
 	 * [1,40, 41,80, 81,120, 121,123]
+	 * </pre>
+	 * 
+	 * <p>
+	 * Assume <i>number</i> and <i>batches</i> are both greater than 1 and the
+	 * former is no smaller than the latter.
 	 * 
 	 * <p>
 	 * Time complexity is O(n) and space complexity is O(n), in worse case.
@@ -148,9 +153,12 @@ public class Looper {
 	 *            The number to be divided into batches
 	 * 
 	 * @param batches
-	 *            The number of partitions to be sharded
+	 *            The number of partitions to be divided
 	 * 
 	 * @return an integer array <i>array</i> with the above-described features.
+	 * @throws IllegalArgumentException
+	 *             if <i>number</i> and <i>batches</i> are not both greater than
+	 *             1 or the former is smaller than the latter.
 	 */
 	public int[] splitUp(int number, int batches) {
 
