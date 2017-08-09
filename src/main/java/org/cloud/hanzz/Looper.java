@@ -115,9 +115,9 @@ public class Looper {
 	/**
 	 * <b>Problem Statement</b>
 	 * <p>
-	 * Given an integer <i>number</i> and the number of batches <i>batches</i>, we want to
-	 * split the number into <i>batches</i> batches and return an integer array
-	 * <i>array</i> which has the following features
+	 * Given an integer <i>number</i> and the number of batches <i>batches</i>,
+	 * we want to split the number into <i>batches</i> batches and return an
+	 * integer array <i>array</i> which has the following features
 	 * 
 	 * <ul>
 	 * <li>array[0] is the start of batch_1, array[1] is the end of batch_1;
@@ -145,13 +145,12 @@ public class Looper {
 	 * Time complexity is O(n) and space complexity is O(n), in worse case.
 	 * 
 	 * @param number
-	 *            The set of positive integers in ascending order
+	 *            The number to be divided into batches
 	 * 
 	 * @param batches
-	 *            The start limit, which is less than or equals to ids.first
+	 *            The number of partitions to be sharded
 	 * 
-	 * @return an integer array <i>array</i> which has the above-described
-	 *         features.
+	 * @return an integer array <i>array</i> with the above-described features.
 	 */
 	public int[] splitUp(int number, int batches) {
 
@@ -169,10 +168,10 @@ public class Looper {
 
 		int i = 0;
 		while (true) {
-			
+
 			ret[i++] = start;
 			end = start + batchSize - 1;
-			
+
 			if (end >= number) {
 				ret[i] = number;
 				break;
