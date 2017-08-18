@@ -1,8 +1,8 @@
 package org.cloud.hanzz;
 
 /**
- * This class contains the looping methods as the solutions to some basic
- * testing questions.
+ * This class contains the looping methods as the solutions to some basic data
+ * structure and algorithm operations.
  * 
  * @author Jiayun Han
  *
@@ -19,7 +19,7 @@ public class Looper {
 	 * <p>
 	 * Assume that (1) the two arrays each can contain any integers and they can
 	 * be empty as well, (2) the two arrays are not necessarily sorted, (3) The
-	 * two array may have different lengths.
+	 * two arrays may have different lengths.
 	 * 
 	 * <p>
 	 * Examples:
@@ -117,7 +117,7 @@ public class Looper {
 	 * <p>
 	 * Given an integer <i>number</i> and the number of batches <i>batches</i>,
 	 * we want to split the number into <i>batches</i> batches and return an
-	 * integer array <i>array</i> which has the following features
+	 * integer array <i>array</i> which has the following features:
 	 * 
 	 * <ul>
 	 * <li>array[0] is the start of batch_1, array[1] is the end of batch_1;
@@ -125,7 +125,7 @@ public class Looper {
 	 * and so on.
 	 * 
 	 * <li>Except the last batch, the difference between the start and the end
-	 * of any batch equals that of any another batch
+	 * of any batch equals that of any other batch
 	 * 
 	 * <li>If batch_j is immediately following batch_i, then the difference
 	 * between the start of batch_j and the end of batch_i is exactly 1.
@@ -135,8 +135,7 @@ public class Looper {
 	 * Example
 	 * 
 	 * <pre>
-	 * if x = 123 and b = 4 (split the number 123 into 4 batches)
-	 * 
+	 * If x = 123 and b = 4 (split the number 123 into 4 batches), 
 	 * then the following array should be returned
 	 * 
 	 * [1,40, 41,80, 81,120, 121,123]
